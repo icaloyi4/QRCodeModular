@@ -61,6 +61,7 @@ dependencies {
     implementation(project(":app:core"))
     implementation(project(":app:features:home"))
     implementation(project(":app:features:promo"))
+    implementation(project(":app:features:payment"))
 
     // Koin for Android
     val koin_version = "3.1.6"
@@ -75,6 +76,13 @@ dependencies {
     //Material
     implementation("androidx.compose.material:material:1.5.0")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
+
+    //Camera
+    val camerax_version = "1.3.0-alpha04"
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation("androidx.camera:camera-view:${camerax_version}")
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

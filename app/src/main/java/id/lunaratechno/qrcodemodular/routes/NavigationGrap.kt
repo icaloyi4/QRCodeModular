@@ -1,16 +1,18 @@
-package id.lunaratechno.qrcodemodular.routes
+ package id.lunaratechno.qrcodemodular.routes
 
+import androidx.camera.core.ExperimentalGetImage
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import id.lunaratechno.features.home.view.HomeScreen
+import id.lunaratechno.features.payment.view.PaymentScreen
 import id.lunaratechno.features.promo.view.PromoScreen
-
+ @ExperimentalGetImage
 @ExperimentalLayoutApi
 @Composable
-fun NavigationGraph(navController: NavHostController) {
+fun  NavigationGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = RoutesModel.home) {
         composable(RoutesModel.home) {
             HomeScreen(navController)
@@ -18,9 +20,9 @@ fun NavigationGraph(navController: NavHostController) {
         composable(RoutesModel.promo) {
             PromoScreen(navController)
         }
-//        composable(RoutesModel.payment) {
-//            PaymentScreen(navController)
-//        }
+        composable(RoutesModel.payment) {
+            PaymentScreen(navController)
+        }
 //        composable(RoutesModel.transaction) {
 //            TransactionScreen(navController)
 //        }

@@ -30,9 +30,43 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3"
+    }
 }
 
 dependencies {
+
+    implementation(project(":app:core"))
+
+    //GSON
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:2.6.0")
+
+    //Material
+    implementation("androidx.compose.material:material:1.5.0")
+
+    // Koin for Android
+    val koin_version = "3.1.6"
+    implementation("io.insert-koin:koin-android:$koin_version")
+    implementation("io.insert-koin:koin-core:$koin_version")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.1")
+
+    //Camera
+    val camerax_version = "1.3.0-alpha04"
+    implementation("androidx.camera:camera-camera2:${camerax_version}")
+    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation("androidx.camera:camera-view:${camerax_version}")
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
+
+    //Permission
+    implementation("com.google.accompanist:accompanist-permissions:0.23.1")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

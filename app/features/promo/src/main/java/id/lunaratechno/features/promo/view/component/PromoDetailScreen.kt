@@ -19,6 +19,8 @@ import coil.compose.rememberAsyncImagePainter
 import id.lunaratechno.core.component.CloseBtnRight
 import id.lunaratechno.core.network.response.BankPromoResponse
 import id.lunaratechno.qrcodemodular.ui.theme.h1
+import id.lunaratechno.qrcodemodular.ui.theme.h5
+import id.lunaratechno.qrcodemodular.ui.theme.h6
 
 //@Preview
 @Composable
@@ -34,7 +36,7 @@ fun PromoDetailScreen(navController: NavController?, data : BankPromoResponse?){
                 contentScale = ContentScale.FillWidth
             )
             Column (modifier = Modifier.padding(10.dp)) {
-                Text(text = data?.nama?:"-", style = h1)
+                Text(text = data?.nama?:"-", style = h5)
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(text = "Promo Detail")
                 Spacer(modifier = Modifier.height(10.dp))
