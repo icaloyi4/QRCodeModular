@@ -62,6 +62,9 @@ dependencies {
     implementation(project(":app:features:home"))
     implementation(project(":app:features:promo"))
     implementation(project(":app:features:payment"))
+    implementation(project(":app:features:transaction"))
+    implementation(project(":app:features:portofolio"))
+    implementation(project(":app:features:notification"))
 
     // Koin for Android
     val koin_version = "3.1.6"

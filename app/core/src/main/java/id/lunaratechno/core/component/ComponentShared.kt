@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import id.lunaratechno.qrcodemodular.routes.MenuItem
+import id.lunaratechno.core.routes.MenuItem
 import id.lunaratechno.qrcodemodular.ui.theme.PrimaryOrange
 import id.lunaratechno.qrcodemodular.ui.theme.SecondaryOrange
 

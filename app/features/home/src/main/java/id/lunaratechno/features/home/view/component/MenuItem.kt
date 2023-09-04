@@ -21,7 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import id.lunaratechno.qrcodemodular.routes.MenuItem
+import id.lunaratechno.core.routes.MenuItem
 
 @Composable
 fun MenuItemComponent(icon : Int, title : String, onClick : () -> Unit){
@@ -41,12 +41,11 @@ fun MenuItemComponent(icon : Int, title : String, onClick : () -> Unit){
 
 @Composable
 fun HomeMenu(navController: NavController){
-    val itemsMenu = emptyList<MenuItem>()
-//        listOf(
-//        MenuItem.Transaction,
-//        MenuItem.Portofolio,
-//        MenuItem.Notification
-//    )
+    val itemsMenu = listOf(
+        MenuItem.Transaction,
+        MenuItem.Portofolio,
+        MenuItem.Notification
+    )
     LazyVerticalGrid (columns = GridCells.Adaptive(minSize = 100.dp)
     ) {
         items(itemsMenu){item->

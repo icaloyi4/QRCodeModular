@@ -29,6 +29,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 import org.koin.core.context.GlobalContext.stopKoin
 
+@androidx.camera.core.ExperimentalGetImage
 class MainActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
@@ -49,7 +50,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onPause() {
         super.onPause()
-        print("Test")
         stopKoin()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,7 +65,8 @@ class MainActivity : ComponentActivity() {
 @ExperimentalLayoutApi
 @ExperimentalMaterialApi
 @Composable
-fun RootScreen() {
+@androidx.camera.core.ExperimentalGetImage
+fun  RootScreen() {
     val navController = rememberNavController()
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -75,6 +76,7 @@ fun RootScreen() {
     }
 }
 
+@androidx.camera.core.ExperimentalGetImage
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
